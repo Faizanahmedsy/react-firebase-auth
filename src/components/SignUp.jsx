@@ -1,7 +1,10 @@
 import { Button, Form, Input } from "antd";
+import { useUserAuth } from "../context/UserAuthContext";
 
 const SignUp = () => {
   const [form] = Form.useForm();
+
+  const { signUp } = useUserAuth();
 
   const handleSubmit = (values) => {
     console.log(values);
